@@ -1,2 +1,2 @@
 # leetcode_rust
- Leetcode exercises in Rust
+ LeetCode exercises in Rust
