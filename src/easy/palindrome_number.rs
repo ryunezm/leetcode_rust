@@ -1,6 +1,15 @@
 /*
-Given an integer x, return true if x is a palindrome, and false otherwise.
+9. Palindrome Number
 https://leetcode.com/problems/palindrome-number/
+Given an integer x, return true if x is a palindrome, and false otherwise.
+
+Constraints:
+
+-231 <= x <= 231 - 1
+
+
+Follow up: Could you solve it without converting the integer to a string?
+
 */
 
 pub fn is_palindrome(x: i32) -> bool {

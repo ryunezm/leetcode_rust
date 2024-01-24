@@ -1,2 +1,2 @@
-# leetcode_rust
- LeetCode exercises in Rust
+# LeetCode Problems
+ LeetCode exercises solved using Rust.
