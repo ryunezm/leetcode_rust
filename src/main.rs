@@ -1,10 +1,12 @@
 mod easy;
 mod medium;
+
 use crate::easy::palindrome_number::is_palindrome;
 use crate::easy::roman_to_integer::roman_to_int;
 use crate::easy::two_sum::two_sum;
 use crate::easy::pascal_triangle::generate;
 use crate::easy::power_of_four::is_power_of_four;
+use crate::easy::distribute_money_to_maximum_children::dist_money;
 fn main() {
 
     //two_sum
@@ -23,12 +25,20 @@ fn main() {
     println!("{}", num_int);
 
     //pascal_triangle
-    let num_rows = 10;
+    let num_rows = 3;
     let triangle = generate(num_rows);
     println!("{:?}", triangle);
 
     //power_of_four
     let n_pof = 64;
     let pof = is_power_of_four(n_pof);
-    println!("{} is a power of four? {}",n_pof, pof)
+    println!("{} is a power of four? {}",n_pof, pof);
+
+    //distribute_money_to_maximum_children
+    let money = 200;
+    let children = 4;
+    let max_children8 = dist_money(money, children);
+    println!("${} distributed among {} children: {}", money, children, max_children8)
+
+
 }
