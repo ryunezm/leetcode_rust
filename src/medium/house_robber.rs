@@ -13,6 +13,7 @@ Constraints:
 0 <= nums[i] <= 400
 */
 
+#[warn(dead_code)]
 pub fn rob(nums: Vec<i32>) -> i32 {
     let mut odd = 0;
     let mut even = 0;

@@ -21,7 +21,7 @@ Only one valid answer exists.
 */
 //noinspection RsExternalLinter
 pub fn two_sum(nums: Vec<i32>, target: i32) -> Vec<i32> {
-    let mut a: i32 = 0;
+    let mut a: i32;
     let b: i32;
 
     for i in 0..(nums.len() - 1) {
