@@ -1,6 +1,8 @@
 /*
 1. Two Sum
-https://leetcode.com/problems/two-sum/
+https://leetcode.com/problems/two-sum
+#Array #Hash_Table
+
 
 Given an array of integers nums and an integer target, return
 indices of the two numbers such that they add up to target.
@@ -19,7 +21,7 @@ Only one valid answer exists.
 
 
 */
-//noinspection RsExternalLinter
+
 pub fn two_sum(nums: Vec<i32>, target: i32) -> Vec<i32> {
     let b: i32;
 

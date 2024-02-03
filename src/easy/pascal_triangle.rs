@@ -1,6 +1,7 @@
 /*
 118. Pascal's Triangle
-https://leetcode.com/problems/pascals-triangle/
+https://leetcode.com/problems/pascals-triangle
+#Array #Dinamic_Programming
 
 Given an integer numRows, return the first numRows of Pascal's triangle.
 

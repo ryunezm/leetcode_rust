@@ -1,6 +1,8 @@
 /*
 9. Palindrome Number
-https://leetcode.com/problems/palindrome-number/
+https://leetcode.com/problems/palindrome-number
+#Math
+
 Given an integer x, return true if x is a palindrome, and false otherwise.
 
 Constraints:

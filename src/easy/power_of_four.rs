@@ -1,6 +1,7 @@
 /*
 342. Power of Four
 https://leetcode.com/problems/power-of-four
+#Math #Bit_Manipulation #Recursion
 
 Given an integer n, return true if it is a power of four. Otherwise, return false.
 
@@ -43,5 +44,5 @@ of one [1] followed by an even number of zeros [0]. Example:
 256 = 100000000
 ... and so on.
 
-Therefore, the steps are: binary -> vector -> one and zero sum check.
+Therefore, the steps are: binary -> vector -> one and zero-sum check.
 */

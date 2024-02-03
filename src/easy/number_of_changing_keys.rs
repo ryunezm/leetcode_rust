@@ -1,6 +1,7 @@
 /*
 3019. Number of Changing Keys
-https://leetcode.com/contest/weekly-contest-382/problems/number-of-changing-keys/
+https://leetcode.com/contest/weekly-contest-382/problems/number-of-changing-keys
+
 
 You are given a 0-indexed string s typed by a user. Changing a key is defined as using a key
 different from the last used key. For example, s = "ab" has a change of a key while s = "bBBb"

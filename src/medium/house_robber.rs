@@ -12,8 +12,7 @@ Constraints:
 1 <= nums.length <= 100
 0 <= nums[i] <= 400
 */
-
-#[warn(dead_code)]
+/*
 pub fn rob(nums: Vec<i32>) -> i32 {
     let mut odd = 0;
     let mut even = 0;
@@ -29,3 +28,4 @@ pub fn rob(nums: Vec<i32>) -> i32 {
     if even>odd { even } else { odd }
 }
 
+*/
