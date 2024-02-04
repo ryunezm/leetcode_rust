@@ -1,15 +1,20 @@
+use crate::easy::_1_two_sum::two_sum;
+use crate::easy::_9_palindrome_number::is_palindrome;
+use crate::easy::_13_roman_to_integer::roman_to_int;
+use crate::easy::_35_search_insert_position::search_insert;
+use crate::easy::_118_pascal_triangle::generate;
+use crate::easy::_342_power_of_four::is_power_of_four;
+use crate::easy::_2591_distribute_money_to_maximum_children::dist_money;
+use crate::easy::_3019_number_of_changing_keys::count_key_changes;
+use crate::easy::_3024_type_of_triangle_ii::triangle_type;
+use crate::easy::_3028_ant_on_the_boundary::return_to_boundary_count;
+
+use crate::medium::divide_two_integers::divide;
+
 mod easy;
 mod medium;
 
-use crate::easy::palindrome_number::is_palindrome;
-use crate::easy::roman_to_integer::roman_to_int;
-use crate::easy::two_sum::two_sum;
-use crate::easy::pascal_triangle::generate;
-use crate::easy::power_of_four::is_power_of_four;
-use crate::easy::distribute_money_to_maximum_children::dist_money;
-use crate::easy::number_of_changing_keys::count_key_changes;
 
-use crate::medium::divide_two_integers::divide;
 fn main() {
 
 
@@ -46,7 +51,7 @@ fn main() {
 
 
     //divide_two_integers
-    let a = 2147483647;
+    let a = 3;//2147483647;
     let b = 3;
     let c = divide(a,b);
     println!("{}/{} = {}", a, b, c);
@@ -56,5 +61,16 @@ fn main() {
     let string1: String = "aAbBcC".to_string();
     println!("{}", count_key_changes(string1));
 
+    //search_insert_position
+    let nums: Vec<i32> = Vec::from([1, 3, 5, 6]);
+    let target = 7;
+    search_insert(nums, target);
 
+    //type_of_triangle_ii
+    let triangle: Vec<i32> = Vec::from([10, 4, 6]);
+    println!("Type of triangle: {}", triangle_type(triangle));
+
+    //ant_on_the_boundary
+    let ants = Vec::from([2,3,-5]);
+    println!("Ant returning to boundary: {}", return_to_boundary_count(ants));
 }
