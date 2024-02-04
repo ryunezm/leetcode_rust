@@ -9,10 +9,11 @@ An integer n is a power of four, if there exists an integer x such that n == 4^x
 
 
 Constraints:
--2^31 <= n <= 2^31 - 1
+-> -2^31 <= n <= 2^31 - 1
 
 
 Follow up: Could you solve it without loops/recursion?
+
 */
 
 pub fn is_power_of_four(n: i32) -> bool {

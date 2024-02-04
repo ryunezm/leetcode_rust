@@ -23,7 +23,7 @@ pub fn count_key_changes(s: String) -> i32 {
 
         if (current_char != previous_char) && (current_char + 32 != previous_char) && (current_char != previous_char + 32) {
             cont+=1;
-            println!("{}. Current char: {} vs Previous char: {}", cont, current_char, previous_char)
+            // println!("{}. Current char: {} vs Previous char: {}", cont, current_char, previous_char)
         }
     }
 

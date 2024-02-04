@@ -13,8 +13,9 @@ In Pascal's triangle, each number is the sum of the two numbers directly above i
      1 3 3 1
     1 4 6 4 1
 
+
 Constraints:
-1 <= numRows <= 30
+-> 1 <= numRows <= 30
 
 */
 

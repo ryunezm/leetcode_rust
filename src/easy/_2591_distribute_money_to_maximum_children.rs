@@ -15,9 +15,10 @@ You have to distribute the money according to the following rules:
 Return the maximum number of children who may receive exactly 8 dollars if you distribute the money
 according to the aforementioned rules. If there is no way to distribute the money, return -1.
 
+
 Constraints:
-1 <= money <= 200
-2 <= children <= 30
+-> 1 <= money <= 200
+-> 2 <= children <= 30
 
 */
 
