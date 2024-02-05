@@ -8,4 +8,5 @@ pub(crate) mod _3019_number_of_changing_keys;
 pub(crate) mod _35_search_insert_position;
 pub(crate) mod _3024_type_of_triangle_ii;
 pub(crate) mod _3028_ant_on_the_boundary;
+pub(crate) mod _387_first_unique_character_in_a_string;
 
