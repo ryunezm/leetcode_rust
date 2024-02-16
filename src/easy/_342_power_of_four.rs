@@ -47,3 +47,51 @@ of one [1] followed by an even number of zeros [0]. Example:
 
 Therefore, the steps are: binary -> vector -> one and zero-sum check.
 */
+
+#[cfg(test)]
+mod tests{
+    use super::*;
+
+    #[test]
+    fn is_power_of_four_case_1(){
+        let n = 16;
+        assert_eq!(is_power_of_four(n), true)
+    }
+
+    #[test]
+    fn is_power_of_four_case_2(){
+        let n = 5;
+        assert_eq!(is_power_of_four(n), false)
+    }
+
+    #[test]
+    fn is_power_of_four_case_3(){
+        let n = 1;
+        assert_eq!(is_power_of_four(n), true)
+    }
+
+    #[test]
+    fn is_power_of_four_case_4(){
+        let n = 4097;
+        assert_eq!(is_power_of_four(n), false)
+    }
+
+    #[test]
+    fn is_power_of_four_case_5(){
+        let n = 4096;
+        assert_eq!(is_power_of_four(n), true)
+    }
+
+    #[test]
+    fn is_power_of_four_case_6(){
+        let n = 1048576;
+        assert_eq!(is_power_of_four(n), true)
+    }
+
+    #[test]
+    fn is_power_of_four_case_7(){
+        let n = 1048579;
+        assert_eq!(is_power_of_four(n), false)
+    }
+
+}

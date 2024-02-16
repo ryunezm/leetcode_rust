@@ -25,3 +25,33 @@ pub fn is_palindrome(x: i32) -> bool {
         inverted == x
     }
 }
+
+#[cfg(test)]
+mod tests{
+    use super::*;
+
+    #[test]
+    fn is_palindrome_case_1(){
+        let x = 121;
+        assert_eq!(is_palindrome(x), true)
+    }
+
+    #[test]
+    fn is_palindrome_case_2(){
+        let x = -121;
+        assert_eq!(is_palindrome(x), false)
+    }
+
+    #[test]
+    fn is_palindrome_case_3(){
+        let x = 10;
+        assert_eq!(is_palindrome(x), false)
+    }
+
+    #[test]
+    fn is_palindrome_case_4(){
+        let x = 222242222;
+        assert_eq!(is_palindrome(x), true)
+    }
+
+}
