@@ -8,7 +8,6 @@ use crate::medium::_29_divide_two_integers::divide;
 
 mod easy;
 mod medium;
-mod tests;
 
 
 fn main() {
