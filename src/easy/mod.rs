@@ -12,4 +12,5 @@ pub(crate) mod _387_first_unique_character_in_a_string;
 mod _3000_maximum_area_of_longest_diagonal_rectangle;
 mod _3033_modify_the_matrix;
 mod _2108_find_first_palindromic_string_in_the_array;
+mod _231_power_of_two;
 
