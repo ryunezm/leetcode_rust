@@ -28,7 +28,7 @@ pub fn is_power_of_four(n: i32) -> bool {
                 .unwrap())
             .collect();
 
-        if n_binary.len() > 2 //
+        if n_binary.len() > 2
             && n_binary.len() % 2 != 0
             && n_binary.iter().skip(1).sum::<u32>()==0
         { true } else { false }
