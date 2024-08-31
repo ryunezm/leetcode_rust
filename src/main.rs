@@ -4,12 +4,10 @@ use crate::easy::_3024_type_of_triangle_ii::triangle_type;
 use crate::easy::_3028_ant_on_the_boundary::return_to_boundary_count;
 use crate::easy::_35_search_insert_position::search_insert;
 use crate::easy::_387_first_unique_character_in_a_string::first_uniq_char;
-use crate::medium::_29_divide_two_integers::divide;
+//use crate::medium::_29_divide_two_integers::divide;
 
 mod easy;
 mod medium;
-mod hard;
-
 
 fn main() {
 
