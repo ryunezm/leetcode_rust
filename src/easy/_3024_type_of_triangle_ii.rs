@@ -26,5 +26,4 @@ pub fn triangle_type(nums: Vec<i32>) -> String {
     else {result = String::from("scalene");}
     
     result
-
 }

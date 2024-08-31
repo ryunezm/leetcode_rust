@@ -17,20 +17,19 @@ Follow up: Could you solve it without loops/recursion?
 */
 
 pub fn is_power_of_four(n: i32) -> bool {
-
-    if n==1 {
+    if n == 1 {
         true
     } else {
         let n_binary: Vec<u32> = format!("{:b}", n)
             .chars()
-            .map(|c|c
+            .map(|c| c
                 .to_digit(10)
                 .unwrap())
             .collect();
 
         if n_binary.len() > 2
             && n_binary.len() % 2 != 0
-            && n_binary.iter().skip(1).sum::<u32>()==0
+            && n_binary.iter().skip(1).sum::<u32>() == 0
         { true } else { false }
     }
 }
@@ -49,49 +48,48 @@ Therefore, the steps are: binary -> vector -> one and zero-sum check.
 */
 
 #[cfg(test)]
-mod tests{
+mod tests {
     use super::*;
 
     #[test]
-    fn is_power_of_four_case_1(){
+    fn is_power_of_four_case_1() {
         let n = 16;
         assert_eq!(is_power_of_four(n), true)
     }
 
     #[test]
-    fn is_power_of_four_case_2(){
+    fn is_power_of_four_case_2() {
         let n = 5;
         assert_eq!(is_power_of_four(n), false)
     }
 
     #[test]
-    fn is_power_of_four_case_3(){
+    fn is_power_of_four_case_3() {
         let n = 1;
         assert_eq!(is_power_of_four(n), true)
     }
 
     #[test]
-    fn is_power_of_four_case_4(){
+    fn is_power_of_four_case_4() {
         let n = 4097;
         assert_eq!(is_power_of_four(n), false)
     }
 
     #[test]
-    fn is_power_of_four_case_5(){
+    fn is_power_of_four_case_5() {
         let n = 4096;
         assert_eq!(is_power_of_four(n), true)
     }
 
     #[test]
-    fn is_power_of_four_case_6(){
+    fn is_power_of_four_case_6() {
         let n = 1048576;
         assert_eq!(is_power_of_four(n), true)
     }
 
     #[test]
-    fn is_power_of_four_case_7(){
+    fn is_power_of_four_case_7() {
         let n = 1048579;
         assert_eq!(is_power_of_four(n), false)
     }
-
 }

@@ -39,5 +39,32 @@ pub fn return_to_boundary_count(nums: Vec<i32>) -> i32 {
     }
 
     bound_count
+}
 
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_return_to_boundary_count() {
+        // Basic case where there is no return to zero
+        let nums1 = vec![1, 2, 3, 4];
+        assert_eq!(return_to_boundary_count(nums1), 0);
+
+        // Case where there is a return to zero
+        let nums2 = vec![1, -1, 2, -2];
+        assert_eq!(return_to_boundary_count(nums2), 2);
+
+        // Case where the vector has only one element
+        let nums3 = vec![5];
+        assert_eq!(return_to_boundary_count(nums3), 0);
+
+        // Case with multiple returns to zero
+        let nums4 = vec![1, -1, 1, -1, 2, -2];
+        assert_eq!(return_to_boundary_count(nums4), 3);
+
+        // Case with values that add up to zero but do not return to zero after the first element
+        let nums5 = vec![0, 0, 0, 0];
+        assert_eq!(return_to_boundary_count(nums5), 3);
+    }
 }

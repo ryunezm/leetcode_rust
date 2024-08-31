@@ -9,8 +9,8 @@ pub(crate) mod _35_search_insert_position;
 pub(crate) mod _3024_type_of_triangle_ii;
 pub(crate) mod _3028_ant_on_the_boundary;
 pub(crate) mod _387_first_unique_character_in_a_string;
-mod _3000_maximum_area_of_longest_diagonal_rectangle;
-mod _3033_modify_the_matrix;
+//mod _3000_maximum_area_of_longest_diagonal_rectangle;
+//mod _3033_modify_the_matrix;
 mod _2108_find_first_palindromic_string_in_the_array;
 mod _231_power_of_two;
 

@@ -61,37 +61,35 @@ pub fn roman_to_int(s: String) -> i32 {
 }
 
 #[cfg(test)]
-mod tests{
+mod tests {
     use super::*;
     #[test]
-    fn test_roman_to_int_case_1(){
+    fn test_roman_to_int_case_1() {
         let s = String::from("III");
         assert_eq!(roman_to_int(s), 3)
     }
 
     #[test]
-    fn test_roman_to_int_case_2(){
+    fn test_roman_to_int_case_2() {
         let s = String::from("LVIII");
         assert_eq!(roman_to_int(s), 58)
     }
 
     #[test]
-    fn test_roman_to_int_case_3(){
+    fn test_roman_to_int_case_3() {
         let s = String::from("MCMXCIV");
         assert_eq!(roman_to_int(s), 1994)
     }
 
     #[test]
-    fn test_roman_to_int_case_4(){
+    fn test_roman_to_int_case_4() {
         let s = String::from("MMMCMXCIX");
         assert_eq!(roman_to_int(s), 3999)
     }
 
     #[test]
-    fn test_roman_to_int_case_5(){
+    fn test_roman_to_int_case_5() {
         let s = String::from("CMXCIX");
         assert_eq!(roman_to_int(s), 999)
     }
-
-
 }

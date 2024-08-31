@@ -16,15 +16,14 @@ Constraints:
 
 
 pub fn first_uniq_char(s: String) -> i32 {
-
     let mut count_char = std::collections::HashMap::new();
 
-    for (index,char) in s.chars().enumerate() { // Count the frequency of each character.
+    for (index, char) in s.chars().enumerate() { // Count the frequency of each character.
         let count = count_char.entry(char).or_insert(0);
         *count += 1;
     }
 
-    for (index, char) in s.chars().enumerate(){ // Find the first and unique character.
+    for (index, char) in s.chars().enumerate() { // Find the first and unique character.
         if *count_char.get(&char).unwrap() == 1 {
             return index as i32;
         }

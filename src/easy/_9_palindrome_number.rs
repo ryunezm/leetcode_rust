@@ -18,8 +18,8 @@ pub fn is_palindrome(x: i32) -> bool {
     if x < 0 { false } else if x >= 0 && x < 10 { true } else {
         let mut aux: i32 = x;
         let mut inverted: i32 = 0;
-        while aux>0 {
-            inverted = inverted * 10 + aux%10;
+        while aux > 0 {
+            inverted = inverted * 10 + aux % 10;
             aux /= 10;
         }
         inverted == x
@@ -27,31 +27,30 @@ pub fn is_palindrome(x: i32) -> bool {
 }
 
 #[cfg(test)]
-mod tests{
+mod tests {
     use super::*;
 
     #[test]
-    fn is_palindrome_case_1(){
+    fn is_palindrome_case_1() {
         let x = 121;
         assert_eq!(is_palindrome(x), true)
     }
 
     #[test]
-    fn is_palindrome_case_2(){
+    fn is_palindrome_case_2() {
         let x = -121;
         assert_eq!(is_palindrome(x), false)
     }
 
     #[test]
-    fn is_palindrome_case_3(){
+    fn is_palindrome_case_3() {
         let x = 10;
         assert_eq!(is_palindrome(x), false)
     }
 
     #[test]
-    fn is_palindrome_case_4(){
+    fn is_palindrome_case_4() {
         let x = 222242222;
         assert_eq!(is_palindrome(x), true)
     }
-
 }

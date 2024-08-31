@@ -17,12 +17,12 @@ typed the letter 'a' and then the letter 'A' then it will not be considered as a
 
 pub fn count_key_changes(s: String) -> i32 {
     let mut cont = 0;
-    for i in 1..s.len()  {
+    for i in 1..s.len() {
         let current_char = s.chars().nth(i).unwrap() as u8;
-        let previous_char = s.chars().nth(i-1).unwrap() as u8;
+        let previous_char = s.chars().nth(i - 1).unwrap() as u8;
 
         if (current_char != previous_char) && (current_char + 32 != previous_char) && (current_char != previous_char + 32) {
-            cont+=1;
+            cont += 1;
             // println!("{}. Current char: {} vs Previous char: {}", cont, current_char, previous_char)
         }
     }

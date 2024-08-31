@@ -14,19 +14,15 @@ Constraints:
 */
 
 pub fn is_power_of_two(n: i32) -> bool {
-
-    if n<0 { false }
-    else if n==1 { true }
-    else {
+    if n < 0 { false } else if n == 1 { true } else {
         let n_binary: Vec<u32> = format!("{:b}", n)
             .chars()
-            .map(|c|c
+            .map(|c| c
                 .to_digit(10)
                 .unwrap())
             .collect();
 
-        if n>1 && n_binary.len() >= 1 && n_binary.iter().sum::<u32>()==1 { true }
-        else { false }
+        if n > 1 && n_binary.len() >= 1 && n_binary.iter().sum::<u32>() == 1 { true } else { false }
     }
 }
 
@@ -99,5 +95,4 @@ mod tests {
         let n = -2147483646;
         assert_eq!(is_power_of_two(n), false)
     }
-
 }
