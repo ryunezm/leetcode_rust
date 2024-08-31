@@ -17,14 +17,6 @@ fn main() {
     let max_children8 = dist_money(money, children);
     println!("${} distributed among {} children: {}", money, children, max_children8);
 
-
-    //divide_two_integers
-    let a = 3;//2147483647;
-    let b = 3;
-    let c = divide(a,b);
-    println!("{}/{} = {}", a, b, c);
-    //println!("{}", i32::MAX/i32::MAX)
-
     //number_of_changing_keys
     let string1: String = "aAbBcC".to_string();
     println!("{}", count_key_changes(string1));
