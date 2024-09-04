@@ -81,4 +81,18 @@ mod tests {
         let right = 50;
         assert_eq!(self_dividing_numbers(left, right), []);
     }
+
+    #[test]
+    fn snd_case6_leetcode_1() {
+        let left = 1;
+        let right = 22;
+        assert_eq!(self_dividing_numbers(left, right), [1,2,3,4,5,6,7,8,9,11,12,15,22])
+    }
+
+    #[test]
+    fn sdn_case_6_leetcode_2() {
+        let left = 47;
+        let right = 85;
+        assert_eq!(self_dividing_numbers(left, right), [48,55,66,77])
+    }
 }
