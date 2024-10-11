@@ -15,6 +15,7 @@ typed the letter 'a' and then the letter 'A' then it will not be considered as a
 
 */
 
+/*
 pub fn count_key_changes(s: String) -> i32 {
     let mut cont = 0;
     for i in 1..s.len() {
@@ -29,3 +30,4 @@ pub fn count_key_changes(s: String) -> i32 {
 
     cont
 }
+*/

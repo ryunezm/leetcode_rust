@@ -17,6 +17,7 @@ Constraints:
 -> 1 <= nums[i] <= 100
 
 */
+/*
 pub fn triangle_type(nums: Vec<i32>) -> String {
     let mut result = String::from("") ;
 
@@ -27,3 +28,5 @@ pub fn triangle_type(nums: Vec<i32>) -> String {
     
     result
 }
+
+*/

@@ -14,7 +14,7 @@ Constraints:
 
 */
 
-
+/*
 pub fn first_uniq_char(s: String) -> i32 {
     let mut count_char = std::collections::HashMap::new();
 
@@ -31,6 +31,8 @@ pub fn first_uniq_char(s: String) -> i32 {
 
     -1
 }
+
+ */
 
 /*
     --- --- --- TIME LIMIT EXCEEDED --- --- ---
