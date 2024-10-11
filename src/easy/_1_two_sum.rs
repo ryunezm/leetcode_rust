@@ -21,11 +21,10 @@ Constraints:
 */
 #[warn(unused_assignments)]
 pub fn two_sum(nums: Vec<i32>, target: i32) -> Vec<i32> {
+    let a;
     let b: i32;
 
     for i in 0..(nums.len() - 1) {
-        let mut a = nums[i];
-
         for j in i + 1..nums.len() {
             if nums[i] + nums[j] == target {
                 a = i as i32;

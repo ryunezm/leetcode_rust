@@ -22,9 +22,7 @@ pub fn count_digits(num: i32) -> i32 {
 
 
     for i in 0.. digits.len() {
-        if (num%digits[i] == 0) {
-            cont = cont + 1;
-        }
+        if num%digits[i] == 0 { cont = cont + 1; }
     }
 
     return cont;

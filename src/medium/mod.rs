@@ -1,2 +1,2 @@
-pub(crate) mod house_robber;
-//pub(crate) mod divide_two_integers;
+mod _7_reverse_integer;
+mod house_robber;
