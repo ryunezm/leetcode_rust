@@ -66,7 +66,7 @@ pub fn reverse(x: i32) -> i32 {
 
     fn pow_10(i: i32) -> Vec<i32> {
         let i = (i + 1).abs();
-        let mut vec = vec![1; i as usize];
+        let mut vec: Vec<i32> = vec![1; i as usize];
         for j in 1..i as usize {
             vec[j] = (vec[j - 1] as i32).checked_mul(10_i32).unwrap_or(1);
         }
