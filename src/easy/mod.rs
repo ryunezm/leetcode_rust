@@ -10,6 +10,7 @@ mod _342_power_of_four;
 mod _387_first_unique_character_in_a_string;
 mod _507_perfect_number;
 mod _728_self_dividing_numbers;
+mod _892_surface_area_of_3d_shapes;
 mod _2108_find_first_palindromic_string_in_the_array;
 mod _2520_count_the_digits_that_divide_a_number;
 mod _2591_distribute_money_to_maximum_children;
