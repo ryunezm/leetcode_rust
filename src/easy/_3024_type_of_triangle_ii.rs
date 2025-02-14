@@ -25,7 +25,7 @@ pub fn triangle_type(nums: Vec<i32>) -> String {
     else if nums[0]==nums[1] && nums[1]==nums[2] {result = String::from("equilateral")}
     else if nums[0] == nums[1] || nums[0] == nums[2] || nums[1] == nums[2] { result = String::from("isosceles"); }
     else {result = String::from("scalene");}
-    
+
     result
 }
 

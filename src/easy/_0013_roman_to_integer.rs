@@ -39,7 +39,6 @@ pub fn roman_to_int(s: String) -> i32 {
     let mut result = 0;
     let mut prev_value = 0;
 
-
     for i in (0..s_as_vec.len()).rev() {
         let value = match s_as_vec[i] {
             'I' => 1,
@@ -49,10 +48,14 @@ pub fn roman_to_int(s: String) -> i32 {
             'C' => 100,
             'D' => 500,
             'M' => 1000,
-            _ => panic!("Invalid!")
+            _ => panic!("Invalid!"),
         };
 
-        if value < prev_value { result -= value; } else { result += value; }
+        if value < prev_value {
+            result -= value;
+        } else {
+            result += value;
+        }
 
         prev_value = value;
     }

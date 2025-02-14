@@ -22,20 +22,26 @@ Constraints:
 
 pub fn is_happy(n: i32) -> bool {
     let mut set_cache_numbers: std::collections::HashSet<i32> = std::collections::HashSet::new();
-    let mut set_cache_square: std::collections::HashMap<i32, i32> = std::collections::HashMap::new();
+    let mut set_cache_square: std::collections::HashMap<i32, i32> =
+        std::collections::HashMap::new();
     let mut aux: i32;
     let mut number: i32 = n;
     set_cache_numbers.insert(n);
-    if n == 1 { return true }
+    if n == 1 {
+        return true;
+    }
 
     loop {
         aux = sum_digits_pow_2(&extract_digits(number), &mut set_cache_square);
-        if aux == 1 { return true }
-        if set_cache_numbers.contains(&aux) { return false; }
+        if aux == 1 {
+            return true;
+        }
+        if set_cache_numbers.contains(&aux) {
+            return false;
+        }
         set_cache_numbers.insert(aux);
         number = aux;
     }
-
 
     fn count_digits(mut n: i32) -> i32 {
         n = n.abs();
@@ -58,16 +64,28 @@ pub fn is_happy(n: i32) -> bool {
         let mut aux_cal: Vec<i32> = vec![0; digits as usize];
 
         for i in 0..digits as usize {
-            if i == 0 { aux_cal[i] = (n % pot_10[i + 1]) / pot_10[i]; } else if i > 8 { if n < 2000000000 { aux_cal[i] = 1; } else { aux_cal[i] = 2 } } else { aux_cal[i] = (n % pot_10[i + 1] - n % pot_10[i]) / pot_10[i]; }
+            if i == 0 {
+                aux_cal[i] = (n % pot_10[i + 1]) / pot_10[i];
+            } else if i > 8 {
+                if n < 2000000000 {
+                    aux_cal[i] = 1;
+                } else {
+                    aux_cal[i] = 2
+                }
+            } else {
+                aux_cal[i] = (n % pot_10[i + 1] - n % pot_10[i]) / pot_10[i];
+            }
         }
 
         aux_cal
     }
 
-    fn sum_digits_pow_2(vec: &[i32], square_cache: &mut std::collections::HashMap<i32, i32>) -> i32 {
-        vec
-            .iter()
-            .map(|&x| { *square_cache.entry(x).or_insert_with(|| x * x) })
+    fn sum_digits_pow_2(
+        vec: &[i32],
+        square_cache: &mut std::collections::HashMap<i32, i32>,
+    ) -> i32 {
+        vec.iter()
+            .map(|&x| *square_cache.entry(x).or_insert_with(|| x * x))
             .sum()
     }
 }
@@ -101,7 +119,7 @@ mod tests {
     }
 
     #[test]
-    fn is_happy_case_6(){
+    fn is_happy_case_6() {
         assert_eq!(is_happy(97), true)
     }
 }

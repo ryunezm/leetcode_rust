@@ -22,15 +22,17 @@ pub fn is_power_of_four(n: i32) -> bool {
     } else {
         let n_binary: Vec<u32> = format!("{:b}", n)
             .chars()
-            .map(|c| c
-                .to_digit(10)
-                .unwrap())
+            .map(|c| c.to_digit(10).unwrap())
             .collect();
 
         if n_binary.len() > 2
             && n_binary.len() % 2 != 0
             && n_binary.iter().skip(1).sum::<u32>() == 0
-        { true } else { false }
+        {
+            true
+        } else {
+            false
+        }
     }
 }
 

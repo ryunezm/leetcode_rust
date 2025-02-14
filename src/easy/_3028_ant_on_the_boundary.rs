@@ -35,7 +35,9 @@ pub fn return_to_boundary_count(nums: Vec<i32>) -> i32 {
     for i in 1..nums.len() {
         bound_acum = bound_acum + nums[i];
 
-        if bound_acum==0 { bound_count+=1; }
+        if bound_acum == 0 {
+            bound_count += 1;
+        }
     }
 
     bound_count

@@ -18,14 +18,30 @@ Constraints:
 
 pub fn search_insert(nums: Vec<i32>, target: i32) -> i32 {
     match nums.len() - 1 {
-        0 => {
-            return if target <= nums[0] { 0 } else { 1 }
-        }
+        0 => return if target <= nums[0] { 0 } else { 1 },
         1 => {
-            if target <= nums[0] { return 0; } else if target > nums[0] && target <= nums[1] { return 1; } else if target > 1 { return 2; }
+            if target <= nums[0] {
+                return 0;
+            } else if target > nums[0] && target <= nums[1] {
+                return 1;
+            } else if target > 1 {
+                return 2;
+            }
         }
         2 => {
-            if target < nums[0] { return 0; } else if target == nums[0] { return 0; } else if target == nums[1] { return 1; } else if target > nums[0] && target <= nums[1] { return 1; } else if target > nums[1] && target <= nums[2] { return 2; } else if target > nums[2] { return 3; }
+            if target < nums[0] {
+                return 0;
+            } else if target == nums[0] {
+                return 0;
+            } else if target == nums[1] {
+                return 1;
+            } else if target > nums[0] && target <= nums[1] {
+                return 1;
+            } else if target > nums[1] && target <= nums[2] {
+                return 2;
+            } else if target > nums[2] {
+                return 3;
+            }
         }
         _ => {
             let mut i: i32 = 0;
@@ -33,7 +49,15 @@ pub fn search_insert(nums: Vec<i32>, target: i32) -> i32 {
             let mut m: i32 = (i + j) / 2;
 
             loop {
-                if target <= nums[i as usize] { return i; } else if target == nums[m as usize] { return m; } else if target == nums[j as usize] { return j; } else if target > nums[j as usize] { return j + 1; } else if target > nums[i as usize] && target < nums[m as usize] {
+                if target <= nums[i as usize] {
+                    return i;
+                } else if target == nums[m as usize] {
+                    return m;
+                } else if target == nums[j as usize] {
+                    return j;
+                } else if target > nums[j as usize] {
+                    return j + 1;
+                } else if target > nums[i as usize] && target < nums[m as usize] {
                     i += 1;
                     j = m;
                     m = (i + j) / 2;

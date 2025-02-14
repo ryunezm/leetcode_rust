@@ -15,7 +15,11 @@ Follow up: Could you solve it without converting the integer to a string?
 */
 
 pub fn is_palindrome(x: i32) -> bool {
-    if x < 0 { false } else if x >= 0 && x < 10 { true } else {
+    if x < 0 {
+        false
+    } else if x >= 0 && x < 10 {
+        true
+    } else {
         let mut aux: i32 = x;
         let mut inverted: i32 = 0;
         while aux > 0 {

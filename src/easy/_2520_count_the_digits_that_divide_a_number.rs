@@ -15,31 +15,28 @@ Constraints:
 
 */
 
-
 pub fn count_digits(num: i32) -> i32 {
     let mut cont = 0;
     let digits = to_digits(num);
 
-
-    for i in 0.. digits.len() {
-        if num%digits[i] == 0 { cont = cont + 1; }
+    for i in 0..digits.len() {
+        if num % digits[i] == 0 {
+            cont = cont + 1;
+        }
     }
 
     return cont;
 
     fn to_digits(num: i32) -> Vec<i32> {
-        num
-            .to_string()
+        num.to_string()
             .chars()
             .map(|c| c.to_digit(10).unwrap() as i32)
             .collect()
     }
 }
 
-
 #[cfg(test)]
 mod tests {
-
     use super::*;
 
     #[test]

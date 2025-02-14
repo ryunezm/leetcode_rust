@@ -54,7 +54,15 @@ mod tests {
     #[test]
     fn generate_case_2() {
         let num_rows = 5;
-        assert_eq!(generate(num_rows), vec![vec![1], vec![1, 1], vec![1, 2, 1], vec![1, 3, 3, 1], vec![1, 4, 6, 4, 1]])
+        assert_eq!(
+            generate(num_rows),
+            vec![
+                vec![1],
+                vec![1, 1],
+                vec![1, 2, 1],
+                vec![1, 3, 3, 1],
+                vec![1, 4, 6, 4, 1]
+            ]
+        )
     }
 }
-

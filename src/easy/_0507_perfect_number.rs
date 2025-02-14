@@ -16,8 +16,14 @@ Constraints:
 
 pub fn check_perfect_number(num: i32) -> bool {
     let mut suma = 0;
-    for i in 1..((num / 2)+1) { if num % i == 0 { suma = suma + i; } }
-    if suma == num { return true; }
+    for i in 1..((num / 2) + 1) {
+        if num % i == 0 {
+            suma = suma + i;
+        }
+    }
+    if suma == num {
+        return true;
+    }
     false
 }
 
@@ -74,5 +80,4 @@ mod tests {
         let n = 8128;
         assert_eq!(check_perfect_number(n), true);
     }
-
 }
