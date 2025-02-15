@@ -49,7 +49,7 @@ pub fn is_happy(n: i32) -> bool {
     }
 
     fn pow_10(i: i32) -> Vec<i32> {
-        let i = (i + 1).abs() as usize;
+        let i = (i + 1).unsigned_abs() as usize;
         let mut vec: Vec<i32> = vec![1; i];
         for j in 1..i {
             vec[j] = vec[j - 1].checked_mul(10).unwrap_or(1);

@@ -29,13 +29,9 @@ pub fn search_insert(nums: Vec<i32>, target: i32) -> i32 {
             }
         }
         2 => {
-            if target < nums[0] {
+            if target <= nums[0] {
                 return 0;
-            } else if target == nums[0] {
-                return 0;
-            } else if target == nums[1] {
-                return 1;
-            } else if target > nums[0] && target <= nums[1] {
+            } else if (target == nums[1]) || (target > nums[0] && target <= nums[1]) {
                 return 1;
             } else if target > nums[1] && target <= nums[2] {
                 return 2;
