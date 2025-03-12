@@ -19,3 +19,4 @@ mod _3024_type_of_triangle_ii;
 mod _3028_ant_on_the_boundary;
 mod _3079_find_the_sum_of_encrypted_integers;
 mod _0066_plus_one;
+mod _2469_convert_the_temperature;
