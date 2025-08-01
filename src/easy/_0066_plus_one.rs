@@ -17,12 +17,8 @@ Constraints:
 */
 
 pub fn plus_one(digits: Vec<i32>) -> Vec<i32> {
-    
-    
     Vec::from([0, 0])
 }
 
 #[cfg(test)]
-mod tests {
-    
-}
+mod tests {}

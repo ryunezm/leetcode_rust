@@ -22,27 +22,24 @@ Constraints:
 */
 
 pub fn convert_temperature(celsius: f64) -> Vec<f64> {
-    
-    Vec::from([celsius + 273.15, celsius*1.80 + 32.00])
-
+    Vec::from([celsius + 273.15, celsius * 1.80 + 32.00])
 }
 
 #[cfg(test)]
 mod tests {
-
     use super::*;
-    
+
     #[test]
-    fn convert_temperature_test_1(){
-        let _celsius:f64 = 36.50;
-        let result = Vec::from([309.65000,97.70000]);
+    fn convert_temperature_test_1() {
+        let _celsius: f64 = 36.50;
+        let result = Vec::from([309.65000, 97.70000]);
         assert_eq!(convert_temperature(_celsius), result);
     }
 
     #[test]
-    fn convert_temperature_test_2(){
-        let _celsius:f64 = 122.11;
-        let result = Vec::from([395.26000,251.79800]);
+    fn convert_temperature_test_2() {
+        let _celsius: f64 = 122.11;
+        let result = Vec::from([395.26000, 251.79800]);
         assert_eq!(convert_temperature(_celsius), result);
     }
 }

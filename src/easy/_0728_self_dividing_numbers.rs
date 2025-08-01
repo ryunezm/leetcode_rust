@@ -19,8 +19,10 @@ Constraints:
 pub fn self_dividing_numbers(left: i32, right: i32) -> Vec<i32> {
     let mut ans = vec![];
 
-    for i in left..right+1 {
-        if has_zero(i) { continue; }
+    for i in left..right + 1 {
+        if has_zero(i) {
+            continue;
+        }
 
         let mut sum = 0;
         for x in to_digits(i) {
@@ -35,21 +37,16 @@ pub fn self_dividing_numbers(left: i32, right: i32) -> Vec<i32> {
     return ans;
 
     fn has_zero(num: i32) -> bool {
-        num
-            .to_string()
-            .contains('0')
+        num.to_string().contains('0')
     }
 
     fn to_digits(num: i32) -> Vec<i32> {
-        num
-            .to_string()
+        num.to_string()
             .chars()
             .map(|c| c.to_digit(10).unwrap() as i32)
             .collect()
     }
 }
-
-
 
 #[cfg(test)]
 mod tests {
@@ -64,9 +61,12 @@ mod tests {
 
     #[test]
     fn sdn_case_2_digits() {
-        let left= 1;
-        let right= 9;
-        assert_eq!(self_dividing_numbers(left, right), [1,2,3,4,5,6,7,8,9])
+        let left = 1;
+        let right = 9;
+        assert_eq!(
+            self_dividing_numbers(left, right),
+            [1, 2, 3, 4, 5, 6, 7, 8, 9]
+        )
     }
 
     #[test]
@@ -77,7 +77,7 @@ mod tests {
     }
 
     #[test]
-    fn sdn_case_4_zero(){
+    fn sdn_case_4_zero() {
         let left = 49;
         let right = 50;
         assert_eq!(self_dividing_numbers(left, right), []);
@@ -87,13 +87,16 @@ mod tests {
     fn snd_case6_leetcode_1() {
         let left = 1;
         let right = 22;
-        assert_eq!(self_dividing_numbers(left, right), [1,2,3,4,5,6,7,8,9,11,12,15,22])
+        assert_eq!(
+            self_dividing_numbers(left, right),
+            [1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 15, 22]
+        )
     }
 
     #[test]
     fn sdn_case_6_leetcode_2() {
         let left = 47;
         let right = 85;
-        assert_eq!(self_dividing_numbers(left, right), [48,55,66,77])
+        assert_eq!(self_dividing_numbers(left, right), [48, 55, 66, 77])
     }
 }
