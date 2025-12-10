@@ -1,5 +1,4 @@
 mod easy;
 mod medium;
 
-fn main() {
-}
+fn main() {}

@@ -56,9 +56,7 @@ pub fn reverse(x: i32) -> i32 {
         let mut aux_cal: Vec<i32> = vec![0; digits as usize];
 
         for i in 0..digits as usize {
-            if i == 0 { aux_cal[i] = (n % pot_10[i + 1]) / pot_10[i]; }
-            else if i>8  { if n<2000000000 { aux_cal[i] = 1; } else { aux_cal[i] = 2} }
-            else { aux_cal[i] = (n % pot_10[i + 1] - n % pot_10[i]) / pot_10[i]; }
+            if i == 0 { aux_cal[i] = (n % pot_10[i + 1]) / pot_10[i]; } else if i > 8 { if n < 2000000000 { aux_cal[i] = 1; } else { aux_cal[i] = 2 } } else { aux_cal[i] = (n % pot_10[i + 1] - n % pot_10[i]) / pot_10[i]; }
         }
 
         aux_cal
